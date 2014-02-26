@@ -44,15 +44,17 @@
     <div class="container">
         <div class="row">
             <div id="assets" class="col-md-4">
-                
+
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#assets-tab" data-toggle="tab">Assets</a></li>
                     <li><a href="#addresses-tab" data-toggle="tab">Addresses</a></li>
                     <li><a href="#activeorders-tab" data-toggle="tab">Open orders</a></li>
+<!--
                     <li><a href="#activebets-tab" data-toggle="tab">Open bets</a></li>
                     <li><a href="#history-tab" data-toggle="tab">History</a></li>
+-->
                 </ul>
 
                 <!-- Tab panes -->
@@ -67,19 +69,21 @@
 
             </div>
             <div id="commands" class="col-md-8">
-               
-                
+
+
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#send-tab" data-toggle="tab">Send</a></li>
-                    <li><a href="#order-tab" data-toggle="tab">Order</a></li>
+                    <li><a href="#order-tab" data-toggle="tab">Sell Asset</a></li>
                     <li><a href="#btcpay-tab" data-toggle="tab">BTCPay</a></li>
                     <li><a href="#cancel-tab" data-toggle="tab">Cancel</a></li>
+<!--
                     <li><a href="#issuance-tab" data-toggle="tab">Issuance</a></li>
                     <li><a href="#dividend-tab" data-toggle="tab">Dividend</a></li>
                     <li><a href="#callback-tab" data-toggle="tab">Callback</a></li>
                     <li><a href="#broadcast-tab" data-toggle="tab">Broadcast</a></li>
                     <li><a href="#bet-tab" data-toggle="tab">Bet</a></li>
+-->
                 </ul>
 
                 <!-- Tab panes -->
@@ -185,7 +189,7 @@
                                 <input type="text" class="form-control" name="quantity">
                                 <p class="help-block">the quantity of ASSET to be issued.</p>
                             </div>
-                            
+
                             <div class="form-group divisible issuance-tab">
                                 <label for="divisible">Divisible</label>
                                 <select class="form-control" name="divisible">
@@ -203,7 +207,7 @@
                                 </select>
                                 <p class="help-block">whether or not the asset is callable (must agree with previous issuances).</p>
                             </div>
-                           
+
                             <div class="form-group call_date issuance-tab">
                                 <label for="call_date">Call date</label>
                                 <input type="text" class="form-control" name="call_date">
@@ -344,7 +348,7 @@
                 </div>
                 <div class="modal-body">
                     <div id="messageDialog">
-                    
+
                     </div>
                 </div>
             </div>
@@ -357,7 +361,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="counterpartygui.js"></script>
-    
+
 
 </body>
 </html>

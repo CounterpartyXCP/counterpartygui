@@ -1,4 +1,11 @@
 var currentAction = 'send';
+var devMode = true;
+var walletUrl;
+if (devMode) {
+    walletUrl = 'http://162.242.150.39:8080/wallet';
+} else {
+    walletUrl = '/wallet';
+}
 
 var counterpartyParams = {
     'send': ['source', 'destination', 'quantity', 'asset'],
@@ -96,7 +103,7 @@ function genSelectSource(data) {
     $('div.source-select').append(select);
 }
 
-function initWallet(data) {
+function initWallet(data, textStatus, jqXHR) {
     genAssetTable(data);
     genSelectSource(data);
     $('#walletLoading').modal('hide');
@@ -113,7 +120,7 @@ function displayForm(action) {
 
 $('#walletLoading').modal('show');
 jQuery.ajax({
-    url:"/wallet",
+    url: walletUrl,
     method: "GET",
     complete: function (jqXHR, textStatus) {
         console.log('status:'+textStatus);
